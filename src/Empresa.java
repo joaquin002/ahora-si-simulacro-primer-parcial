@@ -1,8 +1,16 @@
+import java.util.ArrayList;
 import java.util.HashSet;
 
 public class Empresa {
     private HashSet<Chofer>Choferes;
+    private ArrayList<Viaje> Viajes;
 
+    public Empresa() {
+        this.Choferes = new HashSet<>();
+        this.Viajes = new ArrayList<>();
+    }
+
+    
 }
 /*La empresa cuenta con vehículos de transporte de pasajeros, vehículos de carga y vehículos empresariales
 (para uso interno de la empresa).
@@ -25,3 +33,8 @@ y cuando esto sucede, se actualizan los datos de estos vehículos: velocidad rec
 /*Además de la información de los vehículos, la empresa desea llevar un listado de todos sus choferes,
  de quienes guardaremos el nombre, apellido, dni y salario por km. recorrido
  */
+/*Por último, la empresa nos solicita poder llevar un registro de todos los viajes que realice.
+Precisan de cada viaje: la patente del vehículo que lo realiza,el dni del chofer que maneja,
+ la cantidad de pasajeros o de carga que lleva, el destino del viaje, la distancia del viaje en kms,
+  tarifa del viaje y se le va a asignar un id automáticamente.
+*/
