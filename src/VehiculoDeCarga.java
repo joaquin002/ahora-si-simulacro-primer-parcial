@@ -1,0 +1,18 @@
+public class VehiculoDeCarga extends Vehiculo{
+    private int CapMaxCarga;
+    private UnidadMedida Medida;
+
+    public VehiculoDeCarga(Marcas marca, String modelo, int patente, int velRecomendada, int kilometraje, int capMaxCarga, UnidadMedida medida) {
+        super(marca, modelo, patente, velRecomendada, kilometraje);
+        CapMaxCarga = capMaxCarga;
+        Medida = medida;
+    }
+
+    public int getCapMaxCarga() {
+        return CapMaxCarga;
+    }
+
+    public UnidadMedida getMedida() {
+        return Medida;
+    }
+}
