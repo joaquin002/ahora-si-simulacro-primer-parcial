@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Chofer {
     private String Nombre;
     private String Apellido;
@@ -25,5 +27,25 @@ public class Chofer {
 
     public String getApellido() {
         return Apellido;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this==obj){
+            return true;
+        }
+        if (obj == null){
+            return false;
+        }
+        if (getClass() != obj.getClass()){
+            return false;
+        }
+        Chofer cho = (Chofer) obj;
+        return this.Dni == cho.Dni && Objects.equals(Nombre,cho.Nombre);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(Nombre, Dni);
     }
 }

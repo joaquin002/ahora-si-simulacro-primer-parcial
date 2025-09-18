@@ -1,4 +1,8 @@
+import java.util.HashSet;
+
 public class Empresa {
+    private HashSet<Chofer>Choferes;
+
 }
 /*La empresa cuenta con vehículos de transporte de pasajeros, vehículos de carga y vehículos empresariales
 (para uso interno de la empresa).
