@@ -1,5 +1,5 @@
 public class VehiculoPasajeros extends Vehiculo {
-    private int CantPasajeros
+    private int CantPasajeros;
     private CategoriaDelVehiculo Categoria;
 
     public VehiculoPasajeros(Marcas marca, String modelo, int patente, int velRecomendada, int kilometraje, int cantPasajeros, CategoriaDelVehiculo categoria) {
