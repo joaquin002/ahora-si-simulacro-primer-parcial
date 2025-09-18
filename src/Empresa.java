@@ -18,3 +18,6 @@ y cuando esto sucede, se actualizan los datos de estos vehículos: velocidad rec
  kilometraje y cantidad de pasajeros(en el caso de los de transporte) o cantidad de carga(en los de carga).
   Por esto, ambos tipos de vehículos deberían implementar esta funcionalidad.
  */
+/*Además de la información de los vehículos, la empresa desea llevar un listado de todos sus choferes,
+ de quienes guardaremos el nombre, apellido, dni y salario por km. recorrido
+ */
