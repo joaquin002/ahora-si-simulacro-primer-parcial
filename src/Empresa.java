@@ -1,17 +1,64 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 
 public class Empresa {
     private HashSet<Chofer>Choferes;
     private ArrayList<Viaje> Viajes;
+    private HashMap<Integer,Vehiculo> Vehiculos;
 
     public Empresa() {
         this.Choferes = new HashSet<>();
         this.Viajes = new ArrayList<>();
+        this.Vehiculos = new HashMap<>();
     }
 
+    public boolean añadirVehiculoPasajeros(Marcas marca, String modelo, int patente, int velRecomendada, int kilometraje, int cantPasajeros, CategoriaDelVehiculo categoria){
+        Vehiculo v1 = new VehiculoPasajeros(marca, modelo, patente, velRecomendada, kilometraje, cantPasajeros, categoria);
+        this.Vehiculos.put(v1.getPatente(),v1);
+        return this.Vehiculos.containsKey(v1.getPatente());
+    }
+
+    public boolean añadirVehiculoCarga(Marcas marca, String modelo, int patente, int velRecomendada, int kilometraje, int capMaxCarga, UnidadMedida medida){
+        Vehiculo v2 = new VehiculoDeCarga(marca, modelo, patente, velRecomendada, kilometraje, capMaxCarga, medida);
+        this.Vehiculos.put(v2.getPatente(),v2);
+        return this.Vehiculos.containsKey(v2.getPatente());
+    }
+
+    public boolean añadirVehiculoEmpresarial(Marcas marca, String modelo, int patente, int velRecomendada, int kilometraje, String añoAdquisicion, int cantButacas){
+        Vehiculo v3 = new VehiculosEmpresariales(marca, modelo, patente, velRecomendada, kilometraje, añoAdquisicion, cantButacas);
+        this.Vehiculos.put(v3.getPatente(),v3);
+        return this.Vehiculos.containsKey(v3.getPatente());
+    }
+
+    public boolean quitarVehiculo(int pat){
+        Vehiculo V = Vehiculos.remove(pat);
+
+    }
 
 }
+
+/*Como funcionalidades del sistema:
+Agregar, quitar y listar los vehículos.
+Realizar mantenimiento especial a un vehículo en base a su patente.
+Ver información de un vehículo en particular en base a su patente.
+Agregar, quitar y listar los conductores de la empresa.
+Ver información de un conductor en particular en base a su dni.
+Agregar y listar los viajes de la empresa.
+Ver información de un viaje en base a su id, incluida la información del vehículo y el conductor.
+Saber de un viaje en específico, un estimado del tiempo que tarda en hacerse.
+Saber de un viaje en específico, cuanto se le debe pagar al chofer en el viaje que realiza.
+Y por último, cuánto se recaudó en total en todos los viajes.
+
+Implementar un menú sencillo o de manera secuencial en el main las funcionalidades del sistema.
+*/
+
+
+
+
+
+
+
 /*La empresa cuenta con vehículos de transporte de pasajeros, vehículos de carga y vehículos empresariales
 (para uso interno de la empresa).
 Los vehículos que transportan pasajeros cuentan con una cantidad de pasajeros que pueden llevar,
