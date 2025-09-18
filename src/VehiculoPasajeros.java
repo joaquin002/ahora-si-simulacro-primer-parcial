@@ -17,5 +17,5 @@ public class VehiculoPasajeros extends Vehiculo {
     }
 }
 /*Los vehículos que transportan pasajeros cuentan con una cantidad de pasajeros que pueden
-llevar,la categoría del vehículo que puede ser: standard, premium y deluxe
+llevar, la categoría del vehículo que puede ser: standard, premium y deluxe
  */
