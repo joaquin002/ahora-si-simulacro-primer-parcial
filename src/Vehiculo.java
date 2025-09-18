@@ -40,6 +40,17 @@ public abstract class Vehiculo {
     public void setKilometraje(int kilometraje) {
         Kilometraje = kilometraje;
     }
+
+    @Override
+    public String toString() {
+        return "Vehiculo{" +
+                "Marca=" + Marca +
+                ", Modelo='" + Modelo + '\'' +
+                ", Patente=" + Patente +
+                ", VelRecomendada=" + VelRecomendada +
+                ", Kilometraje=" + Kilometraje +
+                '}';
+    }
 }
 /* el modelo, la marca, la patente y una velocidad recomendada
 y kilometraje.*/

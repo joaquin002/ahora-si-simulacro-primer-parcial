@@ -22,6 +22,14 @@ public class VehiculoPasajeros extends Vehiculo implements MantenimientoEspecial
         setKilometraje(kilometros);
         this.CantPasajeros = cantidad;
     }
+
+    @Override
+    public String toString() {
+        return "VehiculoPasajeros{" +
+                "CantPasajeros=" + CantPasajeros +
+                ", Categoria=" + Categoria +
+                '}';
+    }
 }
 /*Los vehículos que transportan pasajeros cuentan con una cantidad de pasajeros que pueden
 llevar, la categoría del vehículo que puede ser: standard, premium y deluxe

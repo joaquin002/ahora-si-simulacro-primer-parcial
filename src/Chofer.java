@@ -48,4 +48,14 @@ public class Chofer {
     public int hashCode() {
         return Objects.hash(Nombre, Dni);
     }
+
+    @Override
+    public String toString() {
+        return "Chofer{" +
+                "Nombre='" + Nombre + '\'' +
+                ", Apellido='" + Apellido + '\'' +
+                ", Dni=" + Dni +
+                ", SalarioPorKm=" + SalarioPorKm +
+                '}';
+    }
 }

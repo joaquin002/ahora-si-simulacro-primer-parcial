@@ -10,7 +10,7 @@ public class Empresa {
         this.Viajes = new ArrayList<>();
     }
 
-    
+
 }
 /*La empresa cuenta con vehículos de transporte de pasajeros, vehículos de carga y vehículos empresariales
 (para uso interno de la empresa).

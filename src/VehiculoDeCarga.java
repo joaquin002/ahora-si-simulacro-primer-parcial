@@ -22,4 +22,12 @@ public class VehiculoDeCarga extends Vehiculo implements MantenimientoEspecial{
         setKilometraje(kilometros);
         this.CapMaxCarga=cantidad;
     }
+
+    @Override
+    public String toString() {
+        return "VehiculoDeCarga{" +
+                "CapMaxCarga=" + CapMaxCarga +
+                ", Medida=" + Medida +
+                '}';
+    }
 }

@@ -16,4 +16,12 @@ public class VehiculosEmpresariales extends Vehiculo{
     public String getAñoAdquisicion() {
         return AñoAdquisicion;
     }
+
+    @Override
+    public String toString() {
+        return "VehiculosEmpresariales{" +
+                "CantButacas=" + CantButacas +
+                ", AñoAdquisicion='" + AñoAdquisicion + '\'' +
+                '}';
+    }
 }
