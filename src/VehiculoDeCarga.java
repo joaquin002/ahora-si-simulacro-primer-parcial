@@ -1,4 +1,4 @@
-public class VehiculoDeCarga extends Vehiculo{
+public class VehiculoDeCarga extends Vehiculo implements MantenimientoEspecial{
     private int CapMaxCarga;
     private UnidadMedida Medida;
 
@@ -14,5 +14,12 @@ public class VehiculoDeCarga extends Vehiculo{
 
     public UnidadMedida getMedida() {
         return Medida;
+    }
+
+    @Override
+    public void mantenimiento(int velocidad, int kilometros, int cantidad) {
+        setVelRecomendada(velocidad);
+        setKilometraje(kilometros);
+        this.CapMaxCarga=cantidad;
     }
 }

@@ -32,6 +32,14 @@ public abstract class Vehiculo {
     public int getKilometraje() {
         return Kilometraje;
     }
+
+    public void setVelRecomendada(int velRecomendada) {
+        VelRecomendada = velRecomendada;
+    }
+
+    public void setKilometraje(int kilometraje) {
+        Kilometraje = kilometraje;
+    }
 }
 /* el modelo, la marca, la patente y una velocidad recomendada
 y kilometraje.*/

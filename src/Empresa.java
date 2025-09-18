@@ -13,3 +13,8 @@ y kilometraje.
 Por un contrato de la empresa, solo se pueden adquirir vehículos de las marcas: ford, chevrolet, dodge
  y jeep.
 */
+/*La empresa le da un mantenimiento especial a los vehículos que realizan viajes comerciales,
+y cuando esto sucede, se actualizan los datos de estos vehículos: velocidad recomendada,
+ kilometraje y cantidad de pasajeros(en el caso de los de transporte) o cantidad de carga(en los de carga).
+  Por esto, ambos tipos de vehículos deberían implementar esta funcionalidad.
+ */

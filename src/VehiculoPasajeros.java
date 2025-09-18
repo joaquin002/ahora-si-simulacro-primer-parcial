@@ -1,4 +1,4 @@
-public class VehiculoPasajeros extends Vehiculo {
+public class VehiculoPasajeros extends Vehiculo implements MantenimientoEspecial{
     private int CantPasajeros;
     private CategoriaDelVehiculo Categoria;
 
@@ -14,6 +14,13 @@ public class VehiculoPasajeros extends Vehiculo {
 
     public CategoriaDelVehiculo getCategoria() {
         return Categoria;
+    }
+
+    @Override
+    public void mantenimiento(int velocidad, int kilometros, int cantidad) {
+        setVelRecomendada(velocidad);
+        setKilometraje(kilometros);
+        this.CantPasajeros = cantidad;
     }
 }
 /*Los vehículos que transportan pasajeros cuentan con una cantidad de pasajeros que pueden
