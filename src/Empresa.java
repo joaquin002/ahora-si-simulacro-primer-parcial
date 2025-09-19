@@ -11,6 +11,13 @@ public class Empresa {
         this.Vehiculos = new HashMap<>();
     }
 
+    public boolean añadirChofer(String nombre, int salarioPorKm, int dni, String apellido){
+        Chofer c = new Chofer(nombre, salarioPorKm, dni, apellido);
+        Choferes.add(c);
+        return this.Choferes.contains(c);
+    }
+    
+
     public boolean añadirVehiculoPasajeros(Marcas marca, String modelo, int patente, int velRecomendada, int kilometraje, int cantPasajeros, CategoriaDelVehiculo categoria){
         Vehiculo v1 = new VehiculoPasajeros(marca, modelo, patente, velRecomendada, kilometraje, cantPasajeros, categoria);
         this.Vehiculos.put(v1.getPatente(),v1);
