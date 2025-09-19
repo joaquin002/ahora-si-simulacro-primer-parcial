@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.*;
 
 public class Empresa {
     private HashSet<Chofer>Choferes;
@@ -32,8 +30,17 @@ public class Empresa {
     }
 
     public boolean quitarVehiculo(int pat){
-        Vehiculo V = Vehiculos.remove(pat);
+        Vehiculo vehiculoQuitado = Vehiculos.remove(pat);
+        return vehiculoQuitado != null;
+    }
 
+    public String mostrarVehiculo(int patenteBuscada){
+        Vehiculo v = Vehiculos.get(patenteBuscada);
+        if (v != null){
+            return v.toString();
+        }else {
+            return "la patente "+patenteBuscada+"no se encontro";
+        }
     }
 
 }
