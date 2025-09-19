@@ -46,18 +46,18 @@ public class Empresa {
 }
 
 /*Como funcionalidades del sistema:
-Agregar, quitar y listar los vehículos.
-Realizar mantenimiento especial a un vehículo en base a su patente.
-Ver información de un vehículo en particular en base a su patente.
-Agregar, quitar y listar los conductores de la empresa.
-Ver información de un conductor en particular en base a su dni.
-Agregar y listar los viajes de la empresa.
-Ver información de un viaje en base a su id, incluida la información del vehículo y el conductor.
-Saber de un viaje en específico, un estimado del tiempo que tarda en hacerse.
-Saber de un viaje en específico, cuanto se le debe pagar al chofer en el viaje que realiza.
-Y por último, cuánto se recaudó en total en todos los viajes.
+Agregar, quitar y listar los vehículos.//ya esta
+Realizar mantenimiento especial a un vehículo en base a su patente.//falta
+Ver información de un vehículo en particular en base a su patente.//ya esta
+Agregar, quitar y listar los conductores de la empresa.//falta
+Ver información de un conductor en particular en base a su dni.//falta
+Agregar y listar los viajes de la empresa.//falta
+Ver información de un viaje en base a su id, incluida la información del vehículo y el conductor.//falta
+Saber de un viaje en específico, un estimado del tiempo que tarda en hacerse.//falta
+Saber de un viaje en específico, cuanto se le debe pagar al chofer en el viaje que realiza.//falta
+Y por último, cuánto se recaudó en total en todos los viajes.//falta
 
-Implementar un menú sencillo o de manera secuencial en el main las funcionalidades del sistema.
+Implementar un menú sencillo o de manera secuencial en el main las funcionalidades del sistema.//en proceso
 */
 
 

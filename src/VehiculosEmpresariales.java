@@ -19,9 +19,6 @@ public class VehiculosEmpresariales extends Vehiculo{
 
     @Override
     public String toString() {
-        return "VehiculosEmpresariales{" +
-                "CantButacas=" + CantButacas +
-                ", AñoAdquisicion='" + AñoAdquisicion + '\'' +
-                '}';
+        return super.toString()+", cant.Butacas: "+this.CantButacas+", año adquirido: "+this.AñoAdquisicion;
     }
 }

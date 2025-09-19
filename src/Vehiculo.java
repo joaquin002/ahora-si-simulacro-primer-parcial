@@ -48,8 +48,7 @@ public abstract class Vehiculo {
                 ", Modelo='" + Modelo + '\'' +
                 ", Patente=" + Patente +
                 ", VelRecomendada=" + VelRecomendada +
-                ", Kilometraje=" + Kilometraje +
-                '}';
+                ", Kilometraje=" + Kilometraje;
     }
 }
 /* el modelo, la marca, la patente y una velocidad recomendada

@@ -25,9 +25,6 @@ public class VehiculoDeCarga extends Vehiculo implements MantenimientoEspecial{
 
     @Override
     public String toString() {
-        return "VehiculoDeCarga{" +
-                "CapMaxCarga=" + CapMaxCarga +
-                ", Medida=" + Medida +
-                '}';
+        return super.toString()+", cap.Carga: "+this.CapMaxCarga+", tipo de medida: "+this.Medida;
     }
 }

@@ -25,10 +25,8 @@ public class VehiculoPasajeros extends Vehiculo implements MantenimientoEspecial
 
     @Override
     public String toString() {
-        return "VehiculoPasajeros{" +
-                "CantPasajeros=" + CantPasajeros +
-                ", Categoria=" + Categoria +
-                '}';
+        return super.toString()+", cant.pasajeros: "+this.CantPasajeros+
+                ", categoria: "+this.Categoria;
     }
 }
 /*Los vehículos que transportan pasajeros cuentan con una cantidad de pasajeros que pueden
