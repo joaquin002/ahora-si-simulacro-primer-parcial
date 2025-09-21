@@ -14,7 +14,11 @@ public class Main {
             System.out.println("1-agregar vehiculo");
             System.out.println("2-mostrar auto");
             System.out.println("3-quitar vehiculo");
-            System.out.println("4-salir");
+            System.out.println("4-mantenimiento");
+            System.out.println("5-añadir chofer");
+            System.out.println("6-mostrar chofer");
+            System.out.println("7-quitar chofer");
+            System.out.println("9-salir");
             opcion = scanner.nextInt();
             scanner.nextLine();
 
@@ -51,6 +55,20 @@ public class Main {
                     }
                     break;
                 case 4:
+                    System.out.println(e1.mantenimientoVehicular(123));
+                    break;
+                case 5:
+                    e1.añadirChofer("pepe",1000,369258,"pedrop");
+                    e1.añadirChofer("juan",1500,536597,"pedrop");
+                    break;
+                case 6:
+                    System.out.println(e1.mostrarChofer(369258));
+                    System.out.println(e1.mostrarChofer(536597));
+                    break;
+                case 7:
+                    e1.quitarChofer(536597);
+                    break;
+                case 9:
                     salida = false;
                     break;
                 default:

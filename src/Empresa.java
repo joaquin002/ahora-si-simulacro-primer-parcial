@@ -16,7 +16,29 @@ public class Empresa {
         Choferes.add(c);
         return this.Choferes.contains(c);
     }
-    
+
+    public boolean quitarChofer(int dniChofer){
+        Iterator<Chofer>iterator=Choferes.iterator();
+        while (iterator.hasNext()){
+            Chofer chofer = iterator.next();
+            if (chofer.getDni() == dniChofer){
+                iterator.remove();
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public String mostrarChofer(int dniChofer){
+        Iterator<Chofer>iterator = Choferes.iterator();
+        while (iterator.hasNext()){
+            Chofer chofer = iterator.next();
+            if (chofer.getDni() == dniChofer){
+                return chofer.toString();
+            }
+        }
+        return "no se encontro el chofer";
+    }
 
     public boolean añadirVehiculoPasajeros(Marcas marca, String modelo, int patente, int velRecomendada, int kilometraje, int cantPasajeros, CategoriaDelVehiculo categoria){
         Vehiculo v1 = new VehiculoPasajeros(marca, modelo, patente, velRecomendada, kilometraje, cantPasajeros, categoria);
@@ -50,11 +72,25 @@ public class Empresa {
         }
     }
 
+    public String mantenimientoVehicular(int patenteBuscada){
+        Vehiculo v = Vehiculos.get(patenteBuscada);
+        if (v instanceof VehiculoPasajeros){
+            ((VehiculoPasajeros) v).mantenimiento(130,0,6);
+            return "mantenimiento echo";
+        }else if (v instanceof VehiculoDeCarga){
+            ((VehiculoDeCarga) v).mantenimiento(120,0,500);
+            return "mantenimiento echo";
+        }
+        return "vehiculo no apto para mantenimeinto";
+    }
+
+
+
 }
 
 /*Como funcionalidades del sistema:
 Agregar, quitar y listar los vehículos.//ya esta
-Realizar mantenimiento especial a un vehículo en base a su patente.//falta
+Realizar mantenimiento especial a un vehículo en base a su patente.//ya esta
 Ver información de un vehículo en particular en base a su patente.//ya esta
 Agregar, quitar y listar los conductores de la empresa.//falta
 Ver información de un conductor en particular en base a su dni.//falta
