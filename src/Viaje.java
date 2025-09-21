@@ -8,7 +8,7 @@ public class Viaje {
     private int TarifaViaje;
 
     public Viaje(int tarifaViaje, int distanciakm, String destino, int cantPas_Carga, int dniChofer, int patenteVehiculo) {
-        this.IdViaje = IdViaje++;
+        IdViaje++;
         TarifaViaje = tarifaViaje;
         Distanciakm = distanciakm;
         Destino = destino;

@@ -11,6 +11,24 @@ public class Empresa {
         this.Vehiculos = new HashMap<>();
     }
 
+    public boolean añadirVije(int tarifaViaje, int distanciakm, String destino, int cantPas_Carga, int dniChofer, int patenteVehiculo){
+        Viaje v = new Viaje(tarifaViaje, distanciakm, destino, cantPas_Carga, dniChofer, patenteVehiculo);
+        return Viajes.add(v);
+    }
+
+    public String mostrarViaje(int idViaje){
+        for (Viaje v : Viajes){
+            if (v.getIdViaje() == idViaje){
+                return v.toString()+mostrarChofer(v.getDniChofer())+mostrarVehiculo(v.getPatenteVehiculo());
+            }
+        }
+        return "no se encontro el viaje";
+    }
+
+
+
+
+
     public boolean añadirChofer(String nombre, int salarioPorKm, int dni, String apellido){
         Chofer c = new Chofer(nombre, salarioPorKm, dni, apellido);
         Choferes.add(c);
@@ -92,10 +110,10 @@ public class Empresa {
 Agregar, quitar y listar los vehículos.//ya esta
 Realizar mantenimiento especial a un vehículo en base a su patente.//ya esta
 Ver información de un vehículo en particular en base a su patente.//ya esta
-Agregar, quitar y listar los conductores de la empresa.//falta
-Ver información de un conductor en particular en base a su dni.//falta
-Agregar y listar los viajes de la empresa.//falta
-Ver información de un viaje en base a su id, incluida la información del vehículo y el conductor.//falta
+Agregar, quitar y listar los conductores de la empresa.//ya esta
+Ver información de un conductor en particular en base a su dni.//ya esta
+Agregar y listar los viajes de la empresa.//ya esta
+Ver información de un viaje en base a su id, incluida la información del vehículo y el conductor.//ya esta
 Saber de un viaje en específico, un estimado del tiempo que tarda en hacerse.//falta
 Saber de un viaje en específico, cuanto se le debe pagar al chofer en el viaje que realiza.//falta
 Y por último, cuánto se recaudó en total en todos los viajes.//falta

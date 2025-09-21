@@ -18,7 +18,9 @@ public class Main {
             System.out.println("5-añadir chofer");
             System.out.println("6-mostrar chofer");
             System.out.println("7-quitar chofer");
-            System.out.println("9-salir");
+            System.out.println("8-añadir viaje");
+            System.out.println("9-mostrar viaje");
+            System.out.println("10-salir");
             opcion = scanner.nextInt();
             scanner.nextLine();
 
@@ -68,7 +70,13 @@ public class Main {
                 case 7:
                     e1.quitarChofer(536597);
                     break;
+                case 8:
+                    e1.añadirVije(200,600,"mar de las pompas",500,369258,456);
+                    break;
                 case 9:
+                    System.out.println(e1.mostrarViaje(1));
+                    break;
+                case 10:
                     salida = false;
                     break;
                 default:
